@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+}
+
+.timer{
+    color: white;
+    text-align:  center;
+    height: 2em;
+}
+
+.btn{
+    text-align: center;
+
+}
+
+.btn button{
+    
+    height: 3em;
+    width: 10em;   
+}
+
+.btn-start{
+    background-color: rgb(0, 255, 149);
+}
+
+.btn-pause{
+    background-color: yellow;
+}
+
+.btn-stop{
+    background-color: red;
+}
