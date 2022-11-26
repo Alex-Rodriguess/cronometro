@@ -11,6 +11,8 @@ body{
 #contador{
     display: block;
     font-family: 'Digital7';
+    color: rgb(79, 236, 87);
+    font-size: 100px;
 }
 
 .timer{
@@ -24,8 +26,8 @@ body{
 }
 
 .btn button{
-    height: 3em;
-    width: 10em;   
+    height: 5em;
+    width: 15em;   
 }
 
 .btn-start{
