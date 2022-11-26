@@ -1,41 +1,47 @@
-var segundos =0
-var minutos =0
-var horas =0
+var segundos = 00
+var minutos = 00
+var horas = 00
+
 var intervalo
 
 
+function twoDigits(digit) {
+    if (digit < 10) {
+        return ('0' + digit)
+    } else {
+        return (digit);
+    }
+}
+
+
 function start() {
-    intervalo= setInterval(contador, 10)
+    intervalo = setInterval(contador, 1000)
 }
 
 function pause() {
-    clearInterval(intervalo)
+    clearInterval(intervalo);
 }
 
 function stop() {
     clearInterval(intervalo)
-    horas=0
-    minutos=0
-    segundos=0
-    document.getElementById('contador').innerText='00:00:00'
+    horas = 0
+    minutos = 0
+    segundos = 0
+    document.getElementById('contador').innerText = '00:00:00'
 }
 
-function contador(){
+function contador() {
     segundos++
-    document.getElementById('contador').innerText=horas+':'+minutos+':'+segundos
-    if(segundos==60){
+    if (segundos == 60) {
         minutos++
-        segundos=0
-        if(minutos==60){
-            horas++
-            minutos=0
-        }
-      
+        segundos = 0
     }
 
-    
+    document.getElementById('contador').innerText = twoDigits(horas) + ':' + twoDigits(minutos) + ':' + twoDigits(segundos)
+    if (minutos == 60) {
+        horas++;
+        minutos = 0
+    }
+
 }
 
-
-
-    
